@@ -5,8 +5,8 @@ var arr = [100, 180, 260, 310, 40, 535, 695]
 
 let i = 0
 let n = arr.length
-let sum = 0;
-let temp = 0
+let low = 0;
+let high = 0
 let buy = 0
 while (i < n - 1)
 {
@@ -15,14 +15,14 @@ while (i < n - 1)
     {
         i++
     }
-    sum = arr[i]
+    low = arr[i]
     while (i < n - 1 && arr[i] <= arr[i + 1])
     {
         i++
     }
-    temp = arr[i]
+    high = arr[i]
 
-    buy += temp - sum
+    buy += high - low
 }
 
 
